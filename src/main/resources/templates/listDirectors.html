@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>List Directors</title>
+</head>
+<body>
+	<h1>List Directors</h1>
+	<ul>
+		<th:block th:each="director : ${directors}">
+			<li th:inline="text">[[${director.name}]] known for [[${director.genre}]]</li>
+		</th:block>
+	</ul>
+</body>
+</html>
